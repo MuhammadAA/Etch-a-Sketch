@@ -2,37 +2,62 @@ h1 {
     text-align: center;
     font-weight: bold;
     font-size: 50px;
-    margin-top: 0%;
+    margin-top: 1.5%;
     font-family: 'Courier New', Courier, monospace;
 }
 
-#reg {
+#Container {  /* Grid Container */
     display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    border: 8px solid;
+    width: 500px;
+    height: 500px;
+    box-sizing: border-box;
+}
+
+.btn{   /* Sizes and Text settings for color,random, and reset button*/
+    display: inline-block;
     font-size: 25px;
     font-weight: 600;
     margin-left: 10px;
-    margin-bottom: 10px;
+    margin-top: 20px;
 }
- 
 
-#rgb {
+
+.slider { /*Slider div, div that stores slider, output, p elements */
     display: block;
+    margin-left: 15px;
+    margin-top: -15px;
+}
+
+p{ /*Says "Grid Size" */
+    display: inline-block;
     font-size: 25px;
-    color: white;
-    font-weight: 800;
-    margin-left: 10px;
-    margin-top: 10px;
-    background-image: linear-gradient(to right, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3,#92dc7e,#64c987,#39b48e,#089f8f,#00898a,#08737f,#215d6e,#2a4858);
+    font-weight: 600;
 }
-
-.slider {
-    display: block;
+.slideOutput {  /*Number output for the slider input value*/
+    display: inline-block;
     font-size: 25px;
+    font-weight: 600;
+    min-width: 25px;
+}
+
+#slider {
+    display: inline-block;
+    min-width: 295px;
     margin-left: 10px;
-    margin-top: 10px;
 }
 
-#container {
-    display: block;
-
+.inputs {  /*Contains all input elements*/
+    width: fit-content;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
 }
+
+
+
+

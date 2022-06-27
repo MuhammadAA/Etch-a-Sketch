@@ -9,15 +9,22 @@
 </head>
 <body>
     <h1>Etch-A-Sketch</h1>
-    <button id="reg">Color Mode</button>
-    <button id="rgb">Random Color</button>
+    
 
-    <div class="slider">
-        <output>16 </output>
+    <div id="Container">    <!-- Actual container for grid -->
+    </div>
+
+    <div class="inputs">  <!-- Takes button input for different modes, uses a sliding input for grid size -->
+    <button id="btn" class="btn">Color Mode</button>
+    <button id="rgb" class="btn">Random Color</button>
+    <button id="reset" class="btn">Reset</button>
+ 
+    <div class="slider"> <!-- Slider -->
+        <p>Grid Size:</p>
+        <output class="slideOutput">16 </output>
         <input type="range" min="1" max="64" value="16" id="slider" oninput="this.previousElementSibling.value = this.value">
-        
     </div>
-    <div id="Container">
     </div>
+    
 </body>
 </html>
