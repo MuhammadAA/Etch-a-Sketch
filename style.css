@@ -1,3 +1,7 @@
+body{
+    background-color: #D6E6FA;
+}
+
 h1 {
     text-align: center;
     font-weight: bold;
@@ -7,30 +11,51 @@ h1 {
 }
 
 #Container {  /* Grid Container */
-    display: block;
+    display: grid;
+    
+
     margin-left: auto;
     margin-right: auto;
 
-    border: 8px solid;
+    /*border: 8px solid;*/
     width: 500px;
     height: 500px;
     box-sizing: border-box;
 }
 
+
+#box {
+    background-color: white;
+    height: 100%;
+    width: 100%; 
+}
+#box:hover{
+    background-color: black;
+}
+
+
 .btn{   /* Sizes and Text settings for color,random, and reset button*/
     display: inline-block;
+    font-family: 'Courier New', Courier, monospace;
     font-size: 25px;
     font-weight: 600;
-    margin-left: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
     margin-top: 20px;
+    background-color: #D6DAFA;
+}
+.btn:hover{
+    background-color: rgb(230, 230, 250);
 }
 
 
 .slider { /*Slider div, div that stores slider, output, p elements */
+    font-family: 'Courier New', Courier, monospace;
     display: block;
     margin-left: 15px;
     margin-top: -15px;
 }
+
 
 p{ /*Says "Grid Size" */
     display: inline-block;
@@ -46,7 +71,7 @@ p{ /*Says "Grid Size" */
 
 #slider {
     display: inline-block;
-    min-width: 295px;
+    min-width: 255px;
     margin-left: 10px;
 }
 
@@ -55,7 +80,6 @@ p{ /*Says "Grid Size" */
     height: fit-content;
     margin-left: auto;
     margin-right: auto;
-    box-sizing: border-box;
 }
 
 
