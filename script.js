@@ -1,3 +1,9 @@
+const color = document.querySelector("#color");
+var colorChange = color.value;
+color.onchange = function (){
+    colorChange = color.value;
+};
+
 const slider = document.getElementById("slider");
 let size = 16; // Slider Default
 
@@ -41,5 +47,9 @@ function reset(){
 const grid = document.querySelector("#Container")
 grid.addEventListener("mousemove", e => {
     box = document.elementFromPoint(e.clientX, e.clientY);
-    box.style.backgroundColor = "black";
+    if(box.id == "box"){
+        box.style.backgroundColor = colorChange;
+    }
 });
+
+

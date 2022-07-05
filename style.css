@@ -48,6 +48,7 @@ h1 {
 }
 
 
+
 .slider { /*Slider div, div that stores slider, output, p elements */
     font-family: 'Courier New', Courier, monospace;
     display: block;
@@ -81,6 +82,12 @@ p{ /*Says "Grid Size" */
     margin-right: auto;
 }
 
-
+#color {
+    width: 100px;
+    height: match-parent;
+    border: none;
+    padding: none;
+    margin-left: 7%;
+}
 
 
