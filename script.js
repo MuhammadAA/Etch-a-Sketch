@@ -1,8 +1,13 @@
-const slider = document.getElementById("#slider");
-let size = 16; //slide.value
+const slider = document.getElementById("slider");
+let size = 16; // Slider Default
 
 window.onload = function(){
-    createGrid(size)
+    createGrid(slider.value);
+};
+
+slider.onchange = function(){
+    reset();
+    createGrid(slider.value);
 };
 
 function createGrid(size){
@@ -12,15 +17,29 @@ function createGrid(size){
     
     for(let i = 0; i<size*size; i++){
         let newDiv = document.createElement("div");
-        newDiv.setAttribute("id","box")
-
-        
-
-        grid.appendChild(newDiv)
+        newDiv.setAttribute("id","box");
+        grid.appendChild(newDiv);
     }
+};
+
+const resetBTN = document.querySelector("#reset");
+resetBTN.addEventListener("click",function(){
+    reset();
+});
+function reset(){
+    grid.innerHTML=""
+    createGrid(slider.value);
 }
 
-//let box = document.querySelector("#box");
-//box.addEventListener("hover", function(e) {
-  //  e.target.style.backgroundColor = "white";
+
+
+//let box = document.querySelectorAll("#box")
+//box.addEventListener("mousedown", function(e) {
+  //  e.target.style.backgroundColor = "black";
 //});
+
+const grid = document.querySelector("#Container")
+grid.addEventListener("mousemove", e => {
+    box = document.elementFromPoint(e.clientX, e.clientY);
+    box.style.backgroundColor = "black";
+});
