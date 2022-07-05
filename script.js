@@ -1,3 +1,6 @@
+var COLORACTIVE = true;
+var RGBACTIVE = false;
+
 const color = document.querySelector("#color");
 var colorChange = color.value;
 color.onchange = function (){
@@ -39,17 +42,33 @@ function reset(){
 
 
 
-//let box = document.querySelectorAll("#box")
-//box.addEventListener("mousedown", function(e) {
-  //  e.target.style.backgroundColor = "black";
-//});
+
 
 const grid = document.querySelector("#Container")
 grid.addEventListener("mousemove", e => {
     box = document.elementFromPoint(e.clientX, e.clientY);
     if(box.id == "box"){
-        box.style.backgroundColor = colorChange;
+        if (COLORACTIVE == true){
+            box.style.backgroundColor = colorChange;
+        }
+        else if (RGBACTIVE == true){
+            var randColr = Math.floor(Math.random()*16777215).toString(16);
+            box.style.backgroundColor = "#"+ randColr;
+        }
+        
     }
 });
 
 
+
+const rgb = document.querySelector("#rgb");
+rgb.addEventListener("click",function(){
+    COLORACTIVE = false;
+    RGBACTIVE = true;
+});
+
+const colorBtn = document.querySelector("#colorMode");
+colorBtn.addEventListener("click", function() {
+    COLORACTIVE = true;
+    RGBACTIVE = false;
+});
